@@ -4,7 +4,7 @@ This is the main script to run the application.
 
 """
 import os
-os.chdir('/home/cdsw/Clerical_Resolution_Online_Widget/version2_flask')
+os.chdir('/home/cdsw/crow/version2_flask')
 from multiprocessing import Process
 from datetime import datetime
 import shutil
@@ -26,13 +26,13 @@ clust_id=config['id_variables']['cluster_id']
 user = os.environ['HADOOP_USER_NAME']
 
 #Setting up some files if not already done.
-#creating a tmp file 
+#creating a tmp file
 temp_folder=f"{config['filespaces']['local_space']}"
-  
+
 if not os.path.exists(temp_folder):
     os.mkdir(temp_folder)
 
-#creating a user specific temp file within tmp. 
+#creating a user specific temp file within tmp.
 user_temp_folder  = f"{config['filespaces']['local_space']}{user}"
 
 if not os.path.exists(user_temp_folder):
@@ -84,7 +84,7 @@ def new_session():
     for i in session_keys:
         if i!= 'font_choice':
             session.pop(i)
-    
+
     #using hadoop commands- get list of files in folder from hdfs
     process = subprocess.Popen(["hadoop", "fs","-ls","-C",\
                                 config['filespaces']['hdfs_folder'] ],\
@@ -109,9 +109,9 @@ def index():
     #Clear session variables except for font choice
     if request.form.get('version')=="Cluster Version":
         hf.clear_session()
-    
+
     #Set filepaths and read in pd dataframe
-    
+
     #if file not opened in session before
     if 'full_path' not in session:
         local_file,local_in_prog_path, local_filepath_done,\
@@ -121,7 +121,7 @@ def index():
                                               hdfs_in_prog_path,\
                                               local_file, local_filepath_done, hdfs_filepath_done))
         s_thread.start()
-    
+
     #if file already opened in session
     else:
         local_file,local_in_prog_path, local_filepath_done, \
@@ -130,19 +130,19 @@ def index():
     ############ session variables and toggles#############
 
     hf.set_session_variables(local_file)
-    
-    ###if matching done. 
+
+    ###if matching done.
     if hf.check_matching_done(local_file):
         local_file.to_parquet(local_filepath_done)
     else:
         local_file.to_parquet(local_in_prog_path)
 
-    
+
       ##############################Button Code###############################
       ##Code to control the actions on each button press.
       #if match button pressed; add the record Id's of the
       #selected records to the match column as an embedded list
-    
+
     match_error=''
     if request.form.get('Match')=="Match":
         match_error=hf.make_match(local_file,match_error)
@@ -159,7 +159,7 @@ def index():
 #                                              local_file, local_filepath_done,\
 #                                              hdfs_filepath_done)
 
- 
+
 
     #if Clear-Cluster pressed; replace the match column for cluster with '[]'
     if request.form.get('Clear-Cluster')=="Clear-Cluster":
@@ -171,20 +171,20 @@ def index():
         if int(session['index'])>0:
             session['index'] = session['index']-1
 
-    #if save pressed...save file to hdfs    
+    #if save pressed...save file to hdfs
     if request.form.get('save')=="save":
         s_thread=Process(target=save_thread, args= (local_in_prog_path,hdfs_in_prog_path,\
                                                     local_file, local_filepath_done, hdfs_filepath_done))
         s_thread.start()
 
-    
+
     #set select select all and highlighter toggles
     hf.reset_toggles()
 
-      
-        
+
+
       ####################Things to display code#########################
-      
+
     #extract a df dor the current cluster
     data_f=local_file.loc[local_file['Sequential_Cluster_Id']==session['index']]
 
@@ -198,16 +198,16 @@ def index():
     df_display[highlight_cols] = df_display[highlight_cols].astype(str)
     highlight_cols.remove(rec_id)
 
-      
+
       ################HIGHLIGHTER###############
-   
-                  
-    hf.highlighter_func(highlight_cols, df_display)             
+
+
+    hf.highlighter_func(highlight_cols, df_display)
     columns = df_display.columns
     data = df_display.values
 
       #############OTHER THINGS TO DISPLAY#######
-      
+
 
     #get number of clusters and message to display.
     num_clusters=str(local_file.Sequential_Cluster_Id.nunique())
@@ -216,13 +216,13 @@ def index():
     #cast local_file back to json
     session['working_file']=local_file.to_json()
     match_col_index=df_display.columns.get_loc('Match')
-        
+
     #check if cluster done
     cur_cluster_done= hf.check_cluster_done(local_file)
-    
+
     #set continuation message
     done_message=hf.set_continuation_message(local_file, cur_cluster_done)
-    
+
     #some variables for html
     button_left, button_right = hf.set_position_vars(columns)
 
@@ -247,7 +247,7 @@ def about():
 ########################
 
 if __name__=='__main__':
-  
+
     def save_thread(local_in_prog_path,hdfs_in_prog_path,\
                   local_file, local_filepath_done, hdfs_filepath_done):
         """
@@ -262,7 +262,7 @@ if __name__=='__main__':
         else:
             pass
 
-        if os.path.exists(local_filepath_done): 
+        if os.path.exists(local_filepath_done):
             os.remove(local_filepath_done)
         else:
             pass
@@ -276,11 +276,11 @@ if __name__=='__main__':
         else:
             local_file.to_parquet(local_in_prog_path)
             hf.save_hadoop(local_in_prog_path,hdfs_in_prog_path)
-        print('Saving Complete')    
+        print('Saving Complete')
 
-    
-    
-             
+
+
+
     def run_app():
         """
         A function to run the main app
@@ -290,23 +290,23 @@ if __name__=='__main__':
               if you cannot see it, look again in a few secounds')
 
         app.config["TEMPLATES_AUTO_RELOAD"] = True
-        app.run(host="127.0.0.1",port=int(os.environ['CDSW_APP_PORT'])) 
-        
+        app.run(host="127.0.0.1",port=int(os.environ['CDSW_APP_PORT']))
+
 
     ra=Process(target=run_app)
     ra.start()
-    
+
     #run a timer in the main terminal
     #this is run in main occupying the kernel; but timesout after a set time
-    
+
     nowtime=datetime.now()
     n=(nowtime-start_time).total_seconds()
     while n < 14400:
         nowtime=datetime.now()
         n=(nowtime-start_time).total_seconds()
-    
+
     ra.terminate()
-    
+
     #clear the users temp folder.
     for filename in os.listdir(user_temp_folder):
         file_path = os.path.join(user_temp_folder, filename)
@@ -317,5 +317,5 @@ if __name__=='__main__':
                 shutil.rmtree(file_path)
         except FileNotFoundError:
             print(f'temp folder does not exist or is emply')
-    
+
     print('Session has timed out. Please re-start your session \n and re-run the script to continue')
