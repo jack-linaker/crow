@@ -91,6 +91,8 @@ Include details about your configuration and environment:
 - **Which packages do you have installed?** You can get that list by running the
   command `pip list` in the terminal.
 
+[back to the top](#contributing-to-crow)
+
 ### Suggesting Enhancements
 
 This section guides you through submitting an enhancement suggestion for CROW,
@@ -120,6 +122,8 @@ following information:
   see instead** and why.
 - **Explain why this enhancement would be useful** to most CROW users.
 
+[back to the top](#contributing-to-crow)
+
 ### Pull Requests
 
 Please follow these steps to have your contribution considered by the
@@ -137,6 +141,8 @@ maintainers:
 4. Once your changes are ready for review, please open a [pull
    request][github-docs-pull-requests] to the `main` branch.
 5. You may merge the pull request once you have the sign-off of two maintainers.
+
+[back to the top](#contributing-to-crow)
 
 ## Style Guides
 
@@ -184,6 +190,8 @@ You can automatically format and lint your Python code using packages such as
 > **Note:** The style guide for CSS has not been implemented yet. Please check
 > back later for updates. For now, you can refer to The GDS Way's
 > [CSS][gds-way-css-style] coding style page.
+
+[back to the top](#contributing-to-crow)
 
 [crow-issues]: https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget/issues?q=is%3Aissue
 [gds-way-css-style]: https://gds-way.digital.cabinet-office.gov.uk/manuals/programming-languages/css.html
