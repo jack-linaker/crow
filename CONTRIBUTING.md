@@ -59,9 +59,8 @@ the problem:
   exact command you used in the terminal, or how you started CROW otherwise.
   When listing steps, **do not just say what you did, but explain how you did
   it**.
-- **Provide specific examples to demonstrate the steps.** Include links to files
-  or GitHub repositories, or copy-pasteable snippets, which you use in those
-  examples. If you are providing snippets in the issue, use [Markdown code
+- **Provide specific examples to demonstrate the steps.** If you are providing
+  code snippets in the issue, use [Markdown code
   blocks][github-docs-code-blocks].
 - **Describe the behaviour you observed after following the steps** and point
   out what exactly is the problem with that behaviour.
@@ -86,8 +85,11 @@ Provide more context by answering these questions:
 
 Include details about your configuration and environment:
 
+- **What software versions are you using?** Include your Python version if your
+  issue is with CROW1 and your Python and spark versions if your issue is with
+  CROW2.
 - **Which packages do you have installed?** You can get that list by running the
-  command `pip list`.
+  command `pip list` in the terminal.
 
 ### Suggesting Enhancements
 
@@ -112,10 +114,8 @@ following information:
 - **Use a clear and descriptive title** for the issue to identify the
   suggestion.
 - **Provide a step-by-step description of the suggested enhancement** in as much
-  detail as possible.
-- **Provide specific examples to demonstrate the steps.** Include
-  copy-pasteable snippets which you use in those examples as [Markdown code
-  blocks][github-docs-code-blocks].
+  detail as possible. Use [Markdown code blocks][github-docs-code-blocks] if you
+  are providing code snippets.
 - **Describe the current behaviour** and **explain what behaviour you expect to
   see instead** and why.
 - **Explain why this enhancement would be useful** to most CROW users.
@@ -130,7 +130,7 @@ maintainers:
    implementing a bug fix, name it `bug/name_of_issue`.
 2. Implement your changes, following the relevant [style guide](#style-guides)
    for the changes you are making.
-3. Update the `README.md` as well as any other documentation with relevant
+3. Update the `README.md`, as well as any other documentation, with relevant
    details of changes made. This might include: new configuration file
    parameters, new features or changes to existing features, or changes to the
    user interface.
