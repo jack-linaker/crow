@@ -23,7 +23,7 @@ to this document in a pull request.
 This project and everyone participating in it are governed by the Code of
 Conduct.
 
-> **Note:** The Code of Conduct has yet to be implemented. Please check back
+> **Note:** The Code of Conduct has not been implemented yet. Please check back
 > later for updates.
 
 ## How Can I Contribute?
@@ -160,7 +160,7 @@ maintainers:
 
 - Use [Markdown][wikipedia-markdown].
 
-> **Note:** The style guide for documentation has yet to be completed. Please
+> **Note:** The style guide for documentation has not been completed yet. Please
 > check back later for updates.
 
 ### Python
@@ -175,14 +175,14 @@ You can automatically format and lint your Python code using packages such as
 
 ### HTML
 
-> **Note:** The style guide for HTML has yet to be implemented. Please check
+> **Note:** The style guide for HTML has not been implemented yet. Please check
 > back later for updates. For now, you can refer to The GDS Way's
 > [HTML][gds-way-html-style] coding style page.
 
 ### CSS
 
-> **Note:** The style guide for CSS has yet to be implemented. Please check back
-> later for updates. For now, you can refer to The GDS Way's
+> **Note:** The style guide for CSS has not been implemented yet. Please check
+> back later for updates. For now, you can refer to The GDS Way's
 > [CSS][gds-way-css-style] coding style page.
 
 [crow-issues]: https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget/issues?q=is%3Aissue
