@@ -1,4 +1,4 @@
-# Code of Conduct For CROW
+# Code of Conduct for `Clerical_Resolution_Online_Widget`
 
 Contributors to repositories hosted by `Data-Linkage` are expected to follow the
 [Contributor Covenant Code of Conduct](#contributor-covenant-code-of-conduct),

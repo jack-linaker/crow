@@ -1,4 +1,4 @@
-# Contributing to CROW
+# Contributing to `Clerical_Resolution_Online_Widget`
 
 Thank you for taking the time to contribute!
 
@@ -11,9 +11,10 @@ us][email] and we would be happy to help!
 - [How Can I Contribute?](#how-can-i-contribute)
   - [Reporting Bugs](#reporting-bugs)
   - [Suggesting Enhancements](#suggesting-enhancements)
+  - [Development Environment](#development-environment)
   - [Pull Requests](#pull-requests)
-- [Style Guides](#style-guides)
-  - [Git Commit Messages](#git-commit-messages)
+- [Code Conventions](#code-conventions)
+  - [Git](#git)
   - [Documentation](#documentation)
   - [Python](#python)
   - [HTML](#html)
@@ -118,86 +119,136 @@ following information:
   see instead** and why.
 - **Explain why this enhancement would be useful** to most CROW users.
 
+### Development Environment
+
+The following steps should help you set up your development environment so you
+can start contributing code to CROW.
+
+#### CROW1
+
+1. If you are a member of the `Data-Linkage` organisation, clone the CROW GitHub
+   repository:
+
+   ```shell
+   git clone https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget.git
+   ```
+
+   Otherwise, create a [fork][github-docs-forks] of the GitHub repository and
+   clone that as above.
+
+2. Set up a Python virtual environment - [there are many ways to set up a
+   virtual environment][virtual-environments], so we will let you decide what is
+   best for you!
+3. Install the necessary packages using `pip`:
+
+   ```shell
+   pip install -r version1_tkinter/requirements.txt
+   ```
+
+#### CROW2
+
+1. Access your project in Cloudera AI in the Cloudera Data Platform (CDP), and
+   start a session.
+2. Open a terminal by clicking `Terminal Access` within the session.
+3. If you are a member of the `Data-Linkage` organisation, clone the CROW GitHub
+   repository:
+
+   ```shell
+   git clone https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget.git
+   ```
+
+   Otherwise, create a [fork][github-docs-forks] of the GitHub repository and
+   clone that as above.
+
+4. Install the necessary packages using `pip`:
+
+   ```shell
+   pip install -r version2_flask/requirements.txt
+   ```
+
 ### Pull Requests
 
 Please follow these steps to have your contribution considered by the
 maintainers:
 
 1. [Create a new branch][github-docs-branches] from the `main` branch. If you
-   are implementing a feature, name it `feature/name_of_feature`. If you are
+   are implementing a feature, name it `feat/name_of_feature`. If you are
    implementing a bug fix, name it `bug/name_of_issue`.
-2. Implement your changes, following the relevant [style guide](#style-guides)
-   for the changes you are making.
+2. Implement your changes, following the relevant [code
+   conventions](#code-conventions) for the changes you are making.
 3. Update the `README.md`, as well as any other documentation, with relevant
    details of changes made. This might include: new configuration file
    parameters, new features or changes to existing features, or changes to the
    user interface.
 4. You can open a [pull request][github-docs-pull-requests] from your branch to
    the `main` branch after your first commit, but if it is not yet ready for
-   review, be sure to make it a _draft_ pull request. Once your changes are
-   ready for review, please open a [pull request][github-docs-pull-requests] to
-   the `main` branch.
-5. You may merge the pull request once you have the sign-off of two maintainers.
+   review, be sure to make it a [_draft_ pull
+   request][github-docs-draft-pull-request]. Once your changes are ready for
+   review, please mark your pull request as ready for review.
+5. The pull request will be merged once you have the sign-off of a maintainer.
 
-## Style Guides
+## Code Conventions
 
-### Git Commit Messages
+We mainly follow the [GDS Way][gds-way] in our code conventions.
 
-- Use the present tense ("add feature" not "added feature").
-- Use the imperative mood ("change cursor to..." not "changes cursor to...")
-- Limit the first line (the subject) to 72 characters or less.
-- Include references to relevant issues and pull requests.
-- Consider starting the commit message with an applicable scope (e.g.
-  contributing: add git commit message guidelines).
-- Any useful information that does not fit on the subject line (e.g. references
-  to relevant issues and pull requests) can be included in a new paragraph as
-  follows:
+### Git
 
-  ```shell
-  git commit -m "subject line" -m "A paragraph going into more detail."
-  ```
+We use Git to version control the source code. Please read the [quality
+assurance of code for analysis and research][version-control] for details on Git
+best practice. This includes how to write good commit messages, how to branch
+appropriately, and how to solve merge conflicts.
 
 ### Documentation
 
 - Use [Markdown][markdown-guide].
-
-> **Note:** The style guide for documentation has not been completed yet. Please
-> check back later for updates.
+- To keep the files uniform, all links should be referenced at the bottom of the
+  markdown file. This also helps to keep the Markdown file organised.
+- Try to wrap Markdown to a line length of 80 characters. This is not strictly
+  enforced in all cases (e.g. with long hyperlinks).
 
 ### Python
+
+You can refer to the GDS Way's [Python][gds-way-python-style] coding style page,
+but you should at least try to:
 
 - Follow [PEP 8][pep-0008] for code style.
 - Follow [PEP 257][pep-0257] for docstring conventions. In particular, try to
   adhere to [the numpy format][numpydoc-format] when documenting modules,
   classes, and functions using docstrings.
+- If possible, ensure every function you create/change comes with a suitable
+  test suite. Refer to the [GDS Way's Test-driven development][gds-way-tdd] page
+  for more information.
 
 You can automatically format and lint your Python code using packages such as
 [Ruff][ruff], which is available [via PyPi][ruff-pypi].
 
 ### HTML
 
-> **Note:** The style guide for HTML has not been implemented yet. Please check
-> back later for updates. For now, you can refer to The GDS Way's
-> [HTML][gds-way-html-style] coding style page.
+Refer to the GDS Way's [HTML][gds-way-html-style] coding style page.
 
 ### CSS
 
-> **Note:** The style guide for CSS has not been implemented yet. Please check
-> back later for updates. For now, you can refer to The GDS Way's
-> [CSS][gds-way-css-style] coding style page.
+Refer to the GDS Way's [CSS][gds-way-css-style] coding style page.
 
 [code-of-conduct]: ./CODE_OF_CONDUCT.md
 [crow-issues]: https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget/issues?q=is%3Aissue
 [email]: mailto:linkage.hub@ons.gov.uk
+[gds-way]: https://gds-way.digital.cabinet-office.gov.uk/
 [gds-way-css-style]: https://gds-way.digital.cabinet-office.gov.uk/manuals/programming-languages/css.html
 [gds-way-html-style]: https://gds-way.digital.cabinet-office.gov.uk/manuals/programming-languages/html.html
+[gds-way-python-style]: https://gds-way.digital.cabinet-office.gov.uk/manuals/programming-languages/python/python.html
+[gds-way-tdd]: https://gds-way.digital.cabinet-office.gov.uk/standards/test-driven-development.html
 [github-docs-issues]: https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues
 [github-docs-branches]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches
 [github-docs-code-blocks]: https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks
+[github-docs-draft-pull-request]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests
+[github-docs-forks]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks
 [github-docs-pull-requests]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests
+[markdown-guide]: https://www.markdownguide.org/
 [numpydoc-format]: https://numpydoc.readthedocs.io/en/latest/format.html
 [pep-0008]: https://peps.python.org/pep-0008/
 [pep-0257]: https://peps.python.org/pep-0257/
 [ruff]: https://docs.astral.sh/ruff/
 [ruff-pypi]: https://pypi.org/project/ruff/
-[markdown-guide]: https://www.markdownguide.org/
+[version-control]: https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html
+[virtual-environments]: https://www.pluralsight.com/tech-blog/managing-python-environments/
