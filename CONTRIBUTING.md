@@ -4,7 +4,8 @@ Thank you for taking the time to contribute!
 
 The following is a set of guidelines for contributing to CROW. These are mostly
 guidelines, not rules. Use your best judgement, and feel free to propose changes
-to this document in a pull request.
+to this document in a pull request. If you still have questions, [please contact
+us][email] and we would be happy to help!
 
 - [Code of Conduct](#code-of-conduct)
 - [How Can I Contribute?](#how-can-i-contribute)
@@ -21,10 +22,7 @@ to this document in a pull request.
 ## Code of Conduct
 
 This project and everyone participating in it are governed by the Code of
-Conduct.
-
-> **Note:** The Code of Conduct has not been implemented yet. Please check back
-> later for updates.
+Conduct. Please read the [Code of Conduct][code-of-conduct] before contributing.
 
 ## How Can I Contribute?
 
@@ -63,7 +61,7 @@ the problem:
   code snippets in the issue, use [Markdown code
   blocks][github-docs-code-blocks].
 - **Describe the behaviour you observed after following the steps** and point
-  out what exactly is the problem with that behaviour.
+  out the exact problem with that behaviour.
 - **Explain what behaviour you expected to see instead and why.**
 - **Include screenshots** which show you following the described steps and
   clearly demonstrate the problem.
@@ -90,8 +88,6 @@ Include details about your configuration and environment:
   CROW2.
 - **Which packages do you have installed?** You can get that list by running the
   command `pip list` in the terminal.
-
-[back to the top](#contributing-to-crow)
 
 ### Suggesting Enhancements
 
@@ -122,8 +118,6 @@ following information:
   see instead** and why.
 - **Explain why this enhancement would be useful** to most CROW users.
 
-[back to the top](#contributing-to-crow)
-
 ### Pull Requests
 
 Please follow these steps to have your contribution considered by the
@@ -138,11 +132,12 @@ maintainers:
    details of changes made. This might include: new configuration file
    parameters, new features or changes to existing features, or changes to the
    user interface.
-4. Once your changes are ready for review, please open a [pull
-   request][github-docs-pull-requests] to the `main` branch.
+4. You can open a [pull request][github-docs-pull-requests] from your branch to
+   the `main` branch after your first commit, but if it is not yet ready for
+   review, be sure to make it a _draft_ pull request. Once your changes are
+   ready for review, please open a [pull request][github-docs-pull-requests] to
+   the `main` branch.
 5. You may merge the pull request once you have the sign-off of two maintainers.
-
-[back to the top](#contributing-to-crow)
 
 ## Style Guides
 
@@ -158,13 +153,13 @@ maintainers:
   to relevant issues and pull requests) can be included in a new paragraph as
   follows:
 
-  ```bash
+  ```shell
   git commit -m "subject line" -m "A paragraph going into more detail."
   ```
 
 ### Documentation
 
-- Use [Markdown][wikipedia-markdown].
+- Use [Markdown][markdown-guide].
 
 > **Note:** The style guide for documentation has not been completed yet. Please
 > check back later for updates.
@@ -191,9 +186,9 @@ You can automatically format and lint your Python code using packages such as
 > back later for updates. For now, you can refer to The GDS Way's
 > [CSS][gds-way-css-style] coding style page.
 
-[back to the top](#contributing-to-crow)
-
+[code-of-conduct]: ./CODE_OF_CONDUCT.md
 [crow-issues]: https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget/issues?q=is%3Aissue
+[email]: mailto:linkage.hub@ons.gov.uk
 [gds-way-css-style]: https://gds-way.digital.cabinet-office.gov.uk/manuals/programming-languages/css.html
 [gds-way-html-style]: https://gds-way.digital.cabinet-office.gov.uk/manuals/programming-languages/html.html
 [github-docs-issues]: https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues
@@ -205,4 +200,4 @@ You can automatically format and lint your Python code using packages such as
 [pep-0257]: https://peps.python.org/pep-0257/
 [ruff]: https://docs.astral.sh/ruff/
 [ruff-pypi]: https://pypi.org/project/ruff/
-[wikipedia-markdown]: https://en.wikipedia.org/wiki/Markdown
+[markdown-guide]: https://www.markdownguide.org/
