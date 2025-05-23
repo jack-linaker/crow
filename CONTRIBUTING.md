@@ -134,7 +134,7 @@ can start contributing code to CROW.
    ```
 
    Otherwise, create a [fork][github-docs-forks] of the GitHub repository and
-   clone that as above.
+   clone your fork as above.
 
 2. Set up a Python virtual environment - [there are many ways to set up a
    virtual environment][virtual-environments], so we will let you decide what is
@@ -158,7 +158,7 @@ can start contributing code to CROW.
    ```
 
    Otherwise, create a [fork][github-docs-forks] of the GitHub repository and
-   clone that as above.
+   clone your fork as above.
 
 4. Install the necessary packages using `pip`:
 
