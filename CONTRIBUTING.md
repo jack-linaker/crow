@@ -9,14 +9,14 @@ us][email] and we would be happy to help!
 
 - [Code of Conduct](#code-of-conduct)
 - [How Can I Contribute?](#how-can-i-contribute)
-  - [Reporting Bugs \& Suggesting Enhancements](#reporting-bugs--suggesting-enhancements)
+  - [Reporting Bugs and Suggesting Enhancements](#reporting-bugs-and-suggesting-enhancements)
   - [Development Environment](#development-environment)
   - [Pull Requests](#pull-requests)
 - [Code Conventions](#code-conventions)
   - [Git](#git)
   - [Documentation](#documentation)
   - [Python](#python)
-  - [HTML \& CSS](#html--css)
+  - [HTML and CSS](#html-and-css)
 
 ## Code of Conduct
 
@@ -25,7 +25,7 @@ Conduct. Please read the [Code of Conduct][code-of-conduct] before contributing.
 
 ## How Can I Contribute?
 
-### Reporting Bugs & Suggesting Enhancements
+### Reporting Bugs and Suggesting Enhancements
 
 This section guides you through submitting a bug report or enhancement
 suggestion for CROW. Following these guidelines helps maintainers and the
@@ -192,7 +192,7 @@ but you should at least try to:
 You can automatically format and lint your Python code using packages such as
 [Ruff][ruff], which is available via [PyPi][ruff-pypi].
 
-### HTML & CSS
+### HTML and CSS
 
 Refer to the GDS Way's [HTML][gds-way-html-style] and [CSS][gds-way-css-style] coding style pages.
 
