@@ -32,11 +32,11 @@ suggestion for CROW. Following these guidelines helps maintainers and the
 community understand your report/suggestion, reproduce the behaviour, and find
 related reports/suggestions.
 
-Bugs and suggestions are tracked as [GitHub issues][github-docs-issues]. Before
-creating bug reports or enhancement suggestions, please perform a [cursory
-search][crow-issues] to see if it has already been created. If it has, **and the
-issue is still open**, add a comment to the existing issue instead of opening a
-new one. When you are creating an issue, please [include as much detail as
+Bugs and enhancements are tracked as [GitHub issues][github-docs-issues]. Before
+creating an issue, please perform a [cursory search][crow-issues] to see if it
+has already been created. If it has, **and the issue is still open**, add a
+comment to the existing issue instead of opening a new one. When you are
+creating an issue, please [include as much detail as
 possible](#how-do-i-submit-a-good-bug-report-or-enhancement-suggestion).
 
 > [!NOTE]
