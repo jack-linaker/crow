@@ -200,7 +200,7 @@ You can automatically format and lint your Python code using packages such as
 You can refer to the [GDS Way HTML][gds-way-html-style] and
 [CSS][gds-way-css-style] coding style pages.
 
-[code-of-conduct]: ./CODE_OF_CONDUCT.md
+[code-of-conduct]: ./.github/CODE_OF_CONDUCT.md
 [crow-issues]: https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget/issues?q=is%3Aissue
 [email]: mailto:linkage.hub@ons.gov.uk
 [gds-way]: https://gds-way.digital.cabinet-office.gov.uk/
