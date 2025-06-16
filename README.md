@@ -1,7 +1,7 @@
 # CROW (Clerical Resolution Online Widget)
 
-An open-source desktop- and web-based tool designed to support manual
-("clerical") review of linked records in data linkage projects.
+An open-source app designed to support manual ("clerical") review of linked
+records in data linkage projects.
 
 - [What is CROW?](#what-is-crow)
 - [Key Features](#key-features)
