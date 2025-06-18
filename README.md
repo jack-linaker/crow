@@ -46,7 +46,7 @@ There are currently two versions of the app:
   or cluster record comparison. CROW2 has pairwise and cluster comparison
   consolidated into a single app.
 - **Bulk operations**: CROW2 features a "Select all" button for faster clerical
-  review.
+  review of clustered data.
 - **Accessibility-aware**: While CROW1 does have some accessibility features,
   CROW2 was built with WCAG-inspired font-resizing, zoom support, hover
   tooltips, and screen reader compatibility.
@@ -92,7 +92,7 @@ getting set up with each version of the app.
    and activate it:
 
    ```sh
-   .venv/Scripts/activate
+   .venv\Scripts\activate
    ```
 
 3. **Install dependencies**:

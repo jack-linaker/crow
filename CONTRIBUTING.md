@@ -113,8 +113,8 @@ start contributing code to CROW.
 
 #### CROW2
 
-1. Access your project in Cloudera AI in the Cloudera Data Platform (CDP), and
-   start a session.
+1. Access your project in the Dev environment in Cloudera Data Platform's (CDP)
+   Cloudera AI , and start a session.
 2. Open a terminal by clicking `Terminal Access` within the session.
 3. If you are a member of the `Data-Linkage` GitHub organisation, clone the CROW
    GitHub repository by running the following command in a terminal:
