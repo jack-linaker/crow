@@ -59,8 +59,8 @@ The following should help you decide which version of CROW to use:
   `CROW_clusters.py` - for if your data contains pairs or clusters of records.
   CROW2 is a single script (`flask_new_flow.py`) that treats all data as
   clustered. If you want to review pairwise data with CROW2 your data should be
-  in wide-file format and should still contain a cluster ID column (with only a
-  pair of records in each cluster).
+  in long-file format (one record per row) and should still contain a cluster ID
+  column (with only a pair of records in each cluster).
 - CROW2 has various accessibility (based on [Web Content Accessibility
   Guidelines (WCAG) 2.0][accessibility-guidelines]) and feature improvements
   over CROW1, including:
