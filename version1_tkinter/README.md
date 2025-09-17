@@ -21,12 +21,12 @@ of CROW.
 > [!NOTE]
 >
 > The following instructions include the command `python`. This command can only
-> be used when the Python interpreter (`python.exe`) has been added to the
-> [PATH][wikipedia-path] environment variable, or if you are working in a
-> [virtual environment][python-docs-venv]. If neither of these are the case, you
-> can add Python to your user environment variables, otherwise you will need to
-> specify the full path to the Python interpreter instead of typing `python`.
-> That is, rather than running the command:
+> be used when Python has been added to the [PATH][wikipedia-path] environment
+> variable, or if you are working in a [virtual environment][python-docs-venv].
+> If neither of these are the case, you can add Python to your user environment
+> variables, otherwise you will need to specify the full path to the Python
+> interpreter instead of typing `python`. That is, rather than running the
+> command:
 >
 > ```sh
 > python your_script.py
@@ -76,13 +76,13 @@ example, [Command Prompt][wikipedia-cmd].
 ## Usage
 
 More instructions can be found in the `docs` folder but the following can serve
-as a "quickstart" guide.
+as a 'quickstart' guide.
 
 Before you begin, you will need to choose between the clusters and pairwise
 versions of CROW1. Your choice will depend on the format of the data that you
 will be clerically reviewing.
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
 > Make sure your chosen script and its corresponding configuration file are in
 > the same directory as one another. Otherwise the script will not be able to
@@ -92,7 +92,8 @@ will be clerically reviewing.
    to suit your data.
    A guide is embedded within each configuration file.
 2. Start the application by running one of `CROW_clusters.py` or
-   `CROW_pairwise.py` in an IDE or by running the command:
+   `CROW_pairwise.py` in your chosen IDE or from a terminal by running the
+   command:
 
    ```sh
    python CROW_clusters.py
@@ -110,8 +111,8 @@ will be clerically reviewing.
 ## Utils
 
 The `utils` folder contains some scripts that may be useful when working with
-CROW1. Each script will contain a module-level docstring at the top of the file
-that will contain usage instructions.
+CROW1. Each script contains a module-level docstring at the top of the file that
+outlines usage instructions.
 
 ### Cluster-to-pairwise
 
@@ -124,7 +125,8 @@ unique information from each data source per cluster.
 
 If you have additional questions or problems, please [check the
 issues][crow-issues] or [open a new issue][crow-new-issue] according to the
-[contributing guidelines][crow-contributing], or [contact us directly][email].
+[contributing guidelines][crow-contributing], or [contact us directly via
+email][email].
 
 [crow-contributing]: ../CONTRIBUTING.md
 [crow-issues]: https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget/issues
