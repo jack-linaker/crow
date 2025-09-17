@@ -57,11 +57,11 @@ Before you begin:
 - Make sure your data is in the correct format for CROW2.
 - Follow the [installation](#installation) instructions.
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
-> Make sure the CROW2 script and its corresponding configuration file are in the
-> same directory as one another. Otherwise the script will not be able to read
-> the information in the configuration file.
+> Make sure the CROW2 script, helper functions module, and the corresponding
+> configuration file are in the same directory as one another. Otherwise the
+> script will not be able to read the information in the configuration file.
 
 1. If you have not already done so, start a Cloudera AI session in the project
    in which you installed CROW2.
@@ -94,7 +94,8 @@ Before you begin:
 
 If you have additional questions or problems, please [check the
 issues][crow-issues] or [open a new issue][crow-new-issue] according to the
-[contributing guidelines][crow-contributing], or [contact us directly][email].
+[contributing guidelines][crow-contributing], or [contact us directly via
+email][email].
 
 [crow1]: ../version1_tkinter/
 [crow-contributing]: ../CONTRIBUTING.md
