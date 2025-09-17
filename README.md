@@ -3,6 +3,16 @@
 The Clerical Resolution Online Widget (CROW) is an open-source project designed
 to facilitate the clerical review of linked data.
 
+There are currently two types of CROW:
+
+- **CROW1** - a desktop application made with Tkinter.
+- **CROW2** - a web application made with Flask.
+
+> [!IMPORTANT]
+>
+> CROW2 contains bugs that are currently under investigation. As such, we do not
+> recommend its use. Please use CROW1 instead.
+
 - [Getting Started](#getting-started)
   - [Documentation](#documentation)
 - [Version Differences](#version-differences)
@@ -11,19 +21,18 @@ to facilitate the clerical review of linked data.
 - [Acknowledgments](#acknowledgments)
 - [License](#license)
 
-There are currently two types of CROW:
-
-- **CROW1** - a desktop application made with Tkinter.
-- **CROW2** - a web application made with Flask.
-
 ## Getting Started
 
-1. Clone the repo:
+1. There are currently two main ways to access the CROW app:
+   1. Clone the repo using Git (recommended, requires Git):
 
-   ```sh
-   git clone https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget.git
-   cd Clerical_Resolution_Online_Widget
-   ```
+      ```sh
+      git clone https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget.git
+      cd Clerical_Resolution_Online_Widget
+      ```
+
+   2. Download the source code by opening the `Code` dropdown menu in the
+      repository GitHub page and selecting `Download ZIP`.
 
 2. Decide which version to run (see [Version Differences](#version-differences))
    and consult the corresponding documentation:
@@ -35,8 +44,8 @@ There are currently two types of CROW:
 
 The most up-to-date documentation can be found in the folders corresponding to
 each version. There you will find instructions for setting CROW up for your
-project as well as instructions you can give to your clerical matchers on how to
-run CROW once it is set up.
+project as well as instructions you can give to your clerical reviewers on how
+to run CROW once it is set up.
 
 ## Version Differences
 
