@@ -51,8 +51,9 @@ to run CROW once it is set up.
 
 The following should help you decide which version of CROW to use:
 
-- CROW1 is a desktop application, whereas CROW2 is integrated with the Cloudera
-  Data Platform (CDP) and can access files stored in S3 buckets.
+- CROW1 is a desktop application that reads files from your local file system,
+  whereas CROW2 is integrated with the Cloudera Data Platform (CDP) and can
+  access files stored in S3 buckets.
 - CROW1 can only read CSV files, whereas CROW2 can only read parquet files.
 - CROW1 consists of two separate scripts - `CROW_pairwise.py` and
   `CROW_clusters.py` - for if your data contains pairs or clusters of records.
