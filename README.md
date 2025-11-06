@@ -27,8 +27,8 @@ There are currently two types of CROW:
    1. Clone the repo using Git (recommended, requires Git):
 
       ```sh
-      git clone https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget.git
-      cd Clerical_Resolution_Online_Widget
+      git clone https://github.com/ONSdigital/ons-crow.git
+      cd ons-crow
       ```
 
    2. Download the source code by opening the `Code` dropdown menu in the
