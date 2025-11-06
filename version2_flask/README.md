@@ -35,13 +35,13 @@ CROW.
 3. Clone the repository:
 
    ```sh
-   git clone https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget.git
+   git clone https://github.com/ONSdigital/ons-crow.git
    ```
 
 4. Navigate to the location of the CROW2 script and configuration file:
 
    ```sh
-   cd Clerical_Resolution_Online_Widget/version2_flask
+   cd cd ons-crow/version2_flask
    ```
 
 5. Install dependencies:
@@ -76,7 +76,7 @@ Before you begin:
    2. Navigate to the directory containing the CROW2 script and configuration file:
 
       ```sh
-      cd Clerical_Resolution_Online_Widget/version2_flask
+      cd cd ons-crow/version2_flask
       ```
 
    3. Run the script:
