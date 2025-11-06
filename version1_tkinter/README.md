@@ -52,7 +52,7 @@ example, [Command Prompt][wikipedia-cmd].
 2. Navigate to the location of the CROW1 scripts and configuration files:
 
    ```sh
-   cd Clerical_Resolution_Online_Widget/version1_tkinter
+   cd ons-crow/version1_tkinter
    ```
 
 3. Create and activate a virtual environment:
