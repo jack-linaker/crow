@@ -46,7 +46,7 @@ example, [Command Prompt][wikipedia-cmd].
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget.git
+   git clone https://github.com/ONSdigital/ons-crow.git
    ```
 
 2. Navigate to the location of the CROW1 scripts and configuration files:
