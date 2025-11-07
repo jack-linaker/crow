@@ -41,7 +41,7 @@ CROW.
 4. Navigate to the location of the CROW2 script and configuration file:
 
    ```sh
-   cd cd ons-crow/version2_flask
+   cd ons-crow/version2_flask
    ```
 
 5. Install dependencies:
@@ -76,7 +76,7 @@ Before you begin:
    2. Navigate to the directory containing the CROW2 script and configuration file:
 
       ```sh
-      cd cd ons-crow/version2_flask
+      cd ons-crow/version2_flask
       ```
 
    3. Run the script:
