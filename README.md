@@ -1,177 +1,107 @@
-# CROW (Clerical Resolution Online Widget)
+# Clerical Resolution Online Widget (CROW)
 
-An open-source app designed to support manual ("clerical") review of linked
-records in data linkage projects.
+The Clerical Resolution Online Widget (CROW) is an open-source project designed
+to facilitate the clerical review of linked data.
 
-- [What is CROW?](#what-is-crow)
-- [Key Features](#key-features)
+There are currently two types of CROW:
+
+- **CROW1** - a desktop application made with Tkinter.
+- **CROW2** - a web application made with Flask.
+
+> [!IMPORTANT]
+>
+> CROW2 contains bugs that are currently under investigation. As such, we do not
+> recommend its use. Please use CROW1 instead.
+
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Running CROW](#running-crow)
-- [Documentation](#documentation)
-- [Accessibility](#accessibility)
+  - [Documentation](#documentation)
+- [Version Differences](#version-differences)
 - [Contributing](#contributing)
-- [License](#license)
-- [Contact and Support](#contact-and-support)
+- [Contact Us](#contact-us)
 - [Acknowledgments](#acknowledgments)
-
-## What is CROW?
-
-CROW is an app designed to speed up and simplify the clerical review of data
-linkage results.
-
-After automated linking produces candidate pairs or cluster,
-CROW:
-
-- Reads pre-linked data in CSV or parquet format.
-- Presents one record pair (or cluster) at a time.
-- Provides simple "Match" and "Non-match" controls, along with other
-  functionality to aid the match/non-match decision.
-
-There are currently two versions of the app:
-
-- **CROW1**: A desktop app that utilises tkinter. Available in
-  `version1_tkinter`.
-- **CROW2**: A web app that utilises Flask. Available in `version2_flask`. CROW2
-  currently only runs in Cloudera Data Platform (CDP).
-
-## Key Features
-
-- **Web- and desktop-based**: CROW1 uses tkinter, while CROW2 utilises Flask but
-  only runs in Cloudera Data Platform (CDP).
-- **HDFS/Hue/S3 integration**: While CROW1 only works locally with CSV files,
-  CROW2 loads parquet files directly from S3 buckets within a CDP session.
-- **Flexible review modes**: CROW1 comes with two separate scripts for pairwise
-  or cluster record comparison. CROW2 has pairwise and cluster comparison
-  consolidated into a single app.
-- **Bulk operations**: CROW2 features a "Select all" button for faster clerical
-  review of clustered data.
-- **Accessibility-aware**: While CROW1 does have some accessibility features,
-  CROW2 was built with WCAG-inspired font-resizing, zoom support, hover
-  tooltips, and screen reader compatibility.
+- [License](#license)
 
 ## Getting Started
 
-See the `README.md` files and `docs` or `instructions` folders in the
-`version1_tkinter` and `version2_flask` directories for more detailed guides on
-getting set up with each version of the app.
+1. There are currently two main ways to access the CROW app:
+   1. Clone the repo using Git (recommended, requires Git):
 
-### Prerequisites
+      ```sh
+      git clone https://github.com/ONSdigital/ons-crow.git
+      cd ons-crow
+      ```
 
-- Python 3.9+
-- Specific requirements for CROW1 vs CROW2 are listed in the `requirements.txt`
-  file within the corresponding app's directory.
+   2. Download the source code by opening the `Code` dropdown menu in the
+      repository GitHub page and selecting `Download ZIP`.
 
-### Installation
+2. Decide which version to run (see [Version Differences](#version-differences))
+   and consult the corresponding documentation:
 
-1. **Clone this repository**:
+   - For desktop or external users, see [CROW1][crow1].
+   - For internal ONS use, see [CROW1][crow1] (desktop) or [CROW2][crow2] (CDP).
 
-   ```sh
-   git clone https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget.git
-   ```
+### Documentation
 
-   and navigate into directory of the app version you would like to use:
+The most up-to-date documentation can be found in the folders corresponding to
+each version. There you will find instructions for setting CROW up for your
+project as well as instructions you can give to your clerical reviewers on how
+to run CROW once it is set up.
 
-   ```sh
-    cd Clerical_Resolution_Online_Widget/version1_tkinter
-   ```
+## Version Differences
 
-   or
+The following should help you decide which version of CROW to use:
 
-   ```sh
-   cd Clerical_Resolution_Online_Widget/version2_flask
-   ```
-
-2. **Create a virtual environment** (not necessary for CROW2):
-
-   ```sh
-   python -m venv .venv
-   ```
-
-   and activate it:
-
-   ```sh
-   .venv\Scripts\activate
-   ```
-
-3. **Install dependencies**:
-
-   ```sh
-   pip install -r requirements.txt
-   ```
-
-### Running CROW
-
-1. Edit the configuration file (`Config_clusters.ini` or `Config_pairwise.ini`
-   for CROW1, `config_flow.ini` for CROW2) in a text editor to suit your data.
-   Instructions are embedded within the corresponding configuration file.
-
-   > [!WARNING]
-   >
-   > Make sure you do not change the name of the configuration file, the script
-   > wil not be able to read it if you do.
-
-2. Run the script (`CROW_clusters.py` or `CROW_pairwise.py` for CROW1,
-   `flask_new_flow.py` for CROW2):
-
-   ```sh
-   python your_script_name.py
-   ```
-
-## Documentation
-
-Detailed setup and user guides can be found in the respective `README.md` and
-`docs` or `instructions` folders for each version:
-
-- **CROW1**: `version1_tkinter/docs/`
-- **CROW2**: `version2_flask/instructions/`
-
-## Accessibility
-
-We follow [Web Content Accessibility Guidelines (WCAG) 2.0][wcag] where
-possible. Current support includes:
-
-- Adjustable font sizes (CROW1 and CROW2) and style (CROW2 only). Size can be
-  adjusted with buttons in CROW1, or via browser zoom in CROW2.
-- High contrast muted hover tooltips (CROW2 only).
-- Screen-reader "read aloud" compatibility (CROW2 only). This only works if
-  opened in Microsoft Edge.
-
-Planned in future releases:
-
-- Keyboard-tab navigation.
-- Custom background/text colour themes.
-- Grey-out of already-reviewed records.
+- CROW1 is a desktop application that reads files from your local file system,
+  whereas CROW2 is integrated with the Cloudera Data Platform (CDP) and can
+  access files stored in S3 buckets.
+- CROW1 can only read CSV files, whereas CROW2 can only read parquet files.
+- CROW1 consists of two separate scripts - `CROW_pairwise.py` and
+  `CROW_clusters.py` - for if your data contains pairs or clusters of records.
+  CROW2 is a single script (`flask_new_flow.py`) that treats all data as
+  clustered. If you want to review pairwise data with CROW2 your data should be
+  in long-file format (one record per row) and should still contain a cluster ID
+  column (with only a pair of records in each cluster).
+- CROW2 has various accessibility (based on [Web Content Accessibility
+  Guidelines (WCAG) 2.0][accessibility-guidelines]) and feature improvements
+  over CROW1, including:
+  - Adjustable font formatting and style.
+  - Muted colour brightness and highlighting.
+  - Zoom and read-aloud functionality.
+  - 'Select all' button for faster cluster review.
 
 ## Contributing
 
-We welcome community contributions, but please read the [contributing
-guidelines][contributing] first. This will tell you:
+Contributions are welcome but please read [CONTRIBUTING.md][crow-contributing]
+before submitting any changes.
 
-- How to file bugs or feature requests.
-- Branching and pull request guidelines.
-- Coding standards.
+## Contact Us
 
-## License
-
-This project is released under the [MIT License][license].
-
-## Contact and Support
-
-If you have any feedback, questions, require more information, need help, or for
-anything else please raise and issue or contact the CROW team directly:
-
-- File an issue: [GitHub Issues][issues]
-- Email: <linkage.hub@ons.gov.uk>
+If you have additional questions or problems, please [check the
+issues][crow-issues] or [open a new issue][crow-new-issue] according to the
+[contributing guidelines][crow-contributing], or [contact us directly via
+email][email].
 
 ## Acknowledgments
 
 We are grateful to colleagues within the Data Linkage Hub and wider Office for
-National Statistics for providing support, expert advice, and peer
-review of this work.
+National Statistics for providing support, expert advice, and peer review of
+this work.
 
-[contributing]: ./CONTRIBUTING.md
-[issues]: https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget/issues
-[license]: ./LICENSE
-[wcag]: https://www.w3.org/TR/2008/REC-WCAG20-20081211/
+## License
+
+Unless stated otherwise, the codebase is released under the [MIT License][mit].
+This covers both the codebase and any sample code in the documentation.
+
+The documentation is [© Crown copyright][copyright] and available under the
+terms of the [Open Government 3.0 license][ogl].
+
+[accessibility-guidelines]: https://www.w3.org/TR/WCAG20/
+[copyright]: http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+[crow-contributing]: ./CONTRIBUTING.md
+[crow1]: ./version1_tkinter/
+[crow2]: ./version2_flask/
+[crow-issues]: https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget/issues
+[crow-new-issue]: https://github.com/Data-Linkage/Clerical_Resolution_Online_Widget/issues/new
+[email]: mailto:linkage.hub@ons.gov.uk
+[mit]: ./LICENSE
+[ogl]: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
