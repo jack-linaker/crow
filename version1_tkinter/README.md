@@ -28,11 +28,11 @@ of CROW.
 > interpreter instead of typing `python`. That is, rather than running the
 > command:
 > 
-> ```sh  python your_script.py  ```
+> ```sh  python your_script.py```
 > 
 > You would instead run:
 > 
-> ```sh  c:\path\to\your\python\interpreter your_script.py  ```
+> ```sh  c:\path\to\your\python\interpreter your_script.py```
 
 ## Installation
 
