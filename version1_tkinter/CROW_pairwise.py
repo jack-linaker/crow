@@ -12,9 +12,6 @@ file as read-only. And then you are done!
 More detail on these steps can be found on the Data Integration Sharepoint,
 including video documentation.
 Script was orginally created on Wed May 26 2021
-Please get in contact using the below details if you have any questions:
-Craig Scott -- Craig.Scott@ons.gov.uk -- Creator and Lead Developer
-Hannah O'Dair -- Hannah.O'Dair@ons.gov.uk -- Co-Lead Developer
 _________
 We would like to acknowledge and thank David Cobbledick and Andrew Sutton for reviewing this code.
 """
