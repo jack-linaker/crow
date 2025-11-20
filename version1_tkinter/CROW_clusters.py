@@ -19,13 +19,6 @@ Script was orginally created on Wed May 26 2021
 
 Please get in contact using the below details if you have any questions:
 
-Hannah O'Dair -- Hannah.O'Dair@ons.gov.uk -- Co-Lead Developer
-
-Anthony G Edwards -- Anthony.G.Edwards@ons.gov.uk -- Co-Lead Developer
-
-Craig Scott -- Craig.Scott@ons.gov.uk -- Creator
-You can also contact the linkage hub at:
-
 linkage.hub@ons.gov.uk
 
 We would like to acknowledge and thank David Cobbledick and Andrew Sutton for
